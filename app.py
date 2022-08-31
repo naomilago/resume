@@ -1,4 +1,4 @@
-%pip install streamlit_lottie
+!pip install streamlit_lottie
 from streamlit_lottie import st_lottie
 from pathlib import Path
 import streamlit as st
