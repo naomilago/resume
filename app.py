@@ -1,4 +1,5 @@
 from streamlit_lottie import st_lottie
+from bokeh.models.widgets import Div
 from pathlib import Path
 import streamlit as st
 from PIL import Image
@@ -155,3 +156,9 @@ st.subheader("Projects & Accomplishments")
 st.write("---")
 for project, link in PROJECTS.items():
     st.write(f"[{project}]({link})")
+
+if st.button('See all projects'):
+    js = "window.open('https://projects.naomilago.com')"
+    html = '<img src onerror="{}">'.format(js)
+    div = Div(text=html)
+    st.bokeh_chart(div)
